@@ -39,22 +39,3 @@ assertArraysEqual(words, ["hello", "world", "lighthouse"]);
 // without([1, 2, 3], [1]) // => [2, 3]
 // without(["1", "2", "3"], [1, 2, "3"]) // => ["1", "2"]
 
-/*
-const without = function(source, itemsToRemove) {
-  let finalArray = []; 
-  for (let i = 0 ; i < source.length; i++) {
-    for(var j = 0; j < itemsToRemove.length; j++) {
-      if(source[i] !== itemsToRemove[j]) {
-        finalArray.push(source[i])
-      }
-    }
-  }
-      // console.log("getting rid of matching");
-      // array1.splice(i, 1);
-   console.log(finalArray);
-}
-without([1, 2, 3], [1]) // => [2, 3]
-without(["1", "2", "3"], [1, 2, "3"]) // => ["1", "2"]
-
-*/
-// im not sure how to finish this. 
