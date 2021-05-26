@@ -11,15 +11,14 @@ const eqArrays = function(arr1, arr2) {
 };
 
 const assertArraysEqual = function(array1, array2) {
-  let result = eqArrays(array1,array2);
-  if (result) {
-    console.log('✅✅✅ The arrays you passed in ARE the same');
+  // let result = eqArrays(array1,array2);
+  if (eqArrays(array1,array2)) {
+    console.log(`✅✅✅ array1: [${array1}] DOES match array2: [${array2}].`);
   } else {
-    console.log('🛑🛑🛑 The arrays you passed in are NOT the same');
+    console.log(`🛑🛑🛑 array1: [${array1}] does NOT match array2: [${array2}].`);
   }
 
 };
-
 
 const without = function (source, itemsToRemove) {
   let finalArray = [];
@@ -32,8 +31,13 @@ const without = function (source, itemsToRemove) {
 };
 
 
-without([1, 2, 3], [1]) // => [2, 3]
-without(["1", "2", "3"], [1, 2, "3"]) // => ["1", "2"]
+const words = ["hello", "world", "lighthouse"];
+without(words, ["lighthouse"]); 
+assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+
+
+// without([1, 2, 3], [1]) // => [2, 3]
+// without(["1", "2", "3"], [1, 2, "3"]) // => ["1", "2"]
 
 /*
 const without = function(source, itemsToRemove) {
