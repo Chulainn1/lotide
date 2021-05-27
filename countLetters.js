@@ -15,7 +15,7 @@
 // const countLetters = function(string) {
 //   let letters = string.split('');
 //   // console.log(letters);
-//   let newObj = {};
+//   let newObj = {}; 
 //   for (let letter of letters) {
 //     // console.log(letter);
 //     // if (newObj.hasOwnProperty(letter)) {
@@ -35,7 +35,7 @@ const countLetters = function(string) {
   let letters = string.split('');
   //console.log(letters);
   let newObj = {};
-  for (let letter of letters) {
+  for (let letter of letters) { 
     console.log(letter);
     newObj.hasOwnProperty(letter) ? newObj[letter] += 1 : newObj[letter] = 1;
   }
