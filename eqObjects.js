@@ -56,16 +56,6 @@ const eqObjects = function(object1, object2) {
 };
   
 
-
-
-
-
-
-
-
-
-
-
 assertEqual(eqObjects(ab, ba), true);
 assertEqual(eqObjects(cd, dc), true);
 assertEqual(eqObjects(cd, cd2), false);
