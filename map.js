@@ -2,7 +2,7 @@
 
 // An array to map
 // A callback function
-// The map function will return a new array based on the results of the
+// The map function will return a new array based on the results of the 
 // callback function.
 
 const eqArrays = function(arr1, arr2) {
@@ -37,13 +37,7 @@ const animals = [
   { name: 'Harold',     species: 'fish' },
   { name: 'Ursula',     species: 'cat' },
   { name: 'Jimmy',      species: 'fish' }
-];
-
-// let length = lighthouses.map(function(lighthouse) {
-//   return lighthouse.length;
-// })
-
-// console.log(length);
+]
 
 const map = function(array, callback) {
   const results = [];
@@ -54,7 +48,7 @@ const map = function(array, callback) {
     results.push(callback(item));
   }
   return results;
-};
+}
 
 const results1 = map(words, word => word[0]);
 const results2 = map(lighthouses, lighthouse => lighthouse.length);
