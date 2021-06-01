@@ -46,12 +46,12 @@ const middle = function(arr) {
 
 module.exports = middle;
 
-assertArraysEqual(middle([1]), []) // => []
-middle([1, 2]) // => []
-middle([1, 2, 3]) // => [2]
-middle([1, 2, 3, 4, 5])
-assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]) // => [3]
-middle([1, 2, 3, 4, 5, 6]) // => [3, 4]
+// assertArraysEqual(middle([1]), []) // => []
+// middle([1, 2]) // => []
+// middle([1, 2, 3]) // => [2]
+// middle([1, 2, 3, 4, 5])
+// assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]) // => [3]
+// middle([1, 2, 3, 4, 5, 6]) // => [3, 4]
 
 // I need to explain this for myself. 
 // 1st if stament checks to see if the length of the array is <= 2, if it is
