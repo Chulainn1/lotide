@@ -1,36 +1,38 @@
-const eqArrays = function(arr1, arr2) {
-  if (arr1.length !== arr2.length) {
-    return false;
-  }
-  for (let i = 0; i < arr1.length; i++) {
-    if (arr1[i] !== arr2[i]) {
-      return false;
-    }
-  }
-  return true;
-};
+// const eqArrays = function(arr1, arr2) {
+//   if (arr1.length !== arr2.length) {
+//     return false;
+//   }
+//   for (let i = 0; i < arr1.length; i++) {
+//     if (arr1[i] !== arr2[i]) {
+//       return false;
+//     }
+//   }
+//   return true;
+// };
 
-const assertArraysEqual = function(array1, array2) {
-  let result = eqArrays(array1,array2);
-  if (result) {
-    console.log('✅✅✅ The arrays you passed in ARE the same');
-  } else {
-    console.log('🛑🛑🛑 The arrays you passed in are NOT the same');
-  }
+const assertArraysEqual = require("./assertArraysEqual");
 
-};
+// const assertArraysEqual = function(array1, array2) {
+//   let result = eqArrays(array1,array2);
+//   if (result) {
+//     console.log('✅✅✅ The arrays you passed in ARE the same');
+//   } else {
+//     console.log('🛑🛑🛑 The arrays you passed in are NOT the same');
+//   }
+
+// };
 
 const middle = function(arr) {
   let middleArray = [];
   if (arr.length <= 2) {
-    console.log([]);
+    return [];
 
 
 
 
   } else if (arr.length % 2 == 0) { //even
     arr = [arr[Math.floor(arr.length / 2) - 1], arr[Math.floor(arr.length / 2)]];
-    console.log(arr);
+    return arr;
 
 
 
@@ -42,12 +44,14 @@ const middle = function(arr) {
   }
 }
 
-// middle([1]) // => []
-// middle([1, 2]) // => []
-// middle([1, 2, 3]) // => [2]
-test = middle([1, 2, 3, 4, 5])
-assertArraysEqual(test, [3]) // => [3]
-// middle([1, 2, 3, 4, 5, 6]) // => [3, 4]
+module.exports = middle;
+
+assertArraysEqual(middle([1]), []) // => []
+middle([1, 2]) // => []
+middle([1, 2, 3]) // => [2]
+middle([1, 2, 3, 4, 5])
+assertArraysEqual(middle([1, 2, 3, 4, 5]), [3]) // => [3]
+middle([1, 2, 3, 4, 5, 6]) // => [3, 4]
 
 // I need to explain this for myself. 
 // 1st if stament checks to see if the length of the array is <= 2, if it is
